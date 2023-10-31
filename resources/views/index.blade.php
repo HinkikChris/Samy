@@ -80,14 +80,14 @@
           </div>
           <div class="col-lg-8 text-center text-lg-right">
             <ul class="list-inline">
-              <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                  href="research.html">research</a></li>
-              <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                  href="scholarship.html">SCHOLARSHIP</a></li>
-              <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                  href="#loginModal" data-toggle="modal" data-target="#loginModal">Inicia</a></li>
-              <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                  href="#signupModal" data-toggle="modal" data-target="#signupModal">Registrate</a></li>
+                @if(auth()->check())
+                    @livewire('pages.auth.cerrar')
+                @else
+                    <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
+                                                    href="#loginModal" data-toggle="modal" data-target="#loginModal">Inicia</a></li>
+                    <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
+                                                    href="#signupModal" data-toggle="modal" data-target="#signupModal">Registrate</a></li>
+                @endif
             </ul>
           </div>
         </div>
@@ -127,7 +127,6 @@
               <li class="nav-item @@contact">
                 <a class="nav-link" href="contact.html">CONTACTANOS</a>
               </li>
-
             </ul>
           </div>
 
