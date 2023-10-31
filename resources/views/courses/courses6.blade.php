@@ -70,11 +70,8 @@
         </div>
         <div class="col-lg-8 text-center text-lg-right">
           <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="notice.html">notice</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="research.html">research</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="scholarship.html">SCHOLARSHIP</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#loginModal" data-toggle="modal" data-target="#loginModal">login</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#signupModal" data-toggle="modal" data-target="#signupModal">register</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#loginModal" data-toggle="modal" data-target="#loginModal">Inicia</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#signupModal" data-toggle="modal" data-target="#signupModal">Registra</a></li>
           </ul>
         </div>
       </div>
@@ -84,7 +81,7 @@
   <div class="navigation w-100">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="index.html"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
+        <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ asset('images/logo1.png') }}" alt="logo"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -101,18 +98,18 @@
                           Cursos
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="teacher.html">Diseño</a></li>
-                          <li><a class="dropdown-item" href="teacher-single.html">Desarrollo</a></li>
-                          <li><a class="dropdown-item" href="notice.html">Marketing</a></li>
-                          <li><a class="dropdown-item" href="research.html">Gastronomia</a></li>
-                          <li><a class="dropdown-item" href="scholarship.html">Musica</a></li>
-                          <li><a class="dropdown-item" href="course-single.html">Fotografia</a></li>
-                          <li><a class="dropdown-item" href="event-single.html">Negocios</a></li>
-                          <li><a class="dropdown-item" href="blog-single.html">Informatica y Software</a></li>
-                      </ul>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Diseño</a></li>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Desarrollo</a></li>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Marketing</a></li>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Gastronomia</a></li>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Musica</a></li>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Fotografia</a></li>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Negocios</a></li>
+                        <li><a class="dropdown-item" href="{{ route('index') }}">Informatica y Software</a></li>
+                        </ul>
                   </li>
                   <li class="nav-item @@contact">
-                      <a class="nav-link" href="contact.html">CONTACTANOS</a>
+                      <a class="nav-link" href="#miFooter">CONTACTANOS</a>
                   </li>
 
               </ul>
@@ -129,7 +126,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content rounded-0 border-0 p-4">
             <div class="modal-header border-0">
-                <h3>Register</h3>
+                <h3>Registro</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -138,19 +135,19 @@
                 <div class="login">
                     <form action="#" class="row">
                         <div class="col-12">
-                            <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Phone">
+                            <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Telefono">
                         </div>
                         <div class="col-12">
-                            <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Name">
+                            <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Nombre">
                         </div>
                         <div class="col-12">
-                            <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email">
+                            <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Correo">
                         </div>
                         <div class="col-12">
-                            <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Password">
+                            <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Contraseña">
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary">SIGN UP</button>
+                            <button type="submit" class="btn btn-primary">Registro</button>
                         </div>
                     </form>
                 </div>
@@ -163,8 +160,8 @@
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content rounded-0 border-0 p-4">
-            <div class="modal-header border-0">
-                <h3>Login</h3>
+           <div class="modal-header border-0">
+                <h3>Inicio de Sesion</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -172,16 +169,16 @@
             <div class="modal-body">
                 <form action="#" class="row">
                     <div class="col-12">
-                        <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Phone">
+                        <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Telefono">
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Name">
+                        <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Nombre">
                     </div>
                     <div class="col-12">
-                        <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Password">
+                        <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Contraseña">
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">LOGIN</button>
+                        <button type="submit" class="btn btn-primary">Iniciar</button>
                     </div>
                 </form>
             </div>
@@ -248,7 +245,7 @@
                   </ul>
               </div>
               <div class="col-xl-3 text-sm-right text-left order-sm-2 order-3 order-xl-3 col-sm-6 mb-4 mb-xl-0">
-                  <a href="{{ route('cursojs') }}" class="btn btn-primary">Suscribirse</a>
+                  <a href="{{ route('pay') }}" class="btn btn-primary">Suscribirse</a>
               </div>
               <!-- border -->
               <div class="col-12 mt-4 order-4">
@@ -391,105 +388,108 @@
   <!-- /related course -->
 
 <!-- footer -->
-<footer>
-  <!-- newsletter -->
-  <div class="newsletter">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
-          <h3 class="text-white">Subscribe Now</h3>
-          <form action="#">
-            <div class="input-wrapper">
-              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
-              <button type="submit" value="send" class="btn btn-primary">Join</button>
-            </div>
-          </form>
+<footer id="miFooter">
+    <!-- newsletter -->
+    <div class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+            <h3 class="text-white">Incribete ahora</h3>
+            <form action="#">
+              <div class="input-wrapper">
+                <input type="email" class="form-control border-0" id="newsletter" name="newsletter"
+                  placeholder="Ingresa tu Correo">
+                <button type="submit" value="send" class="btn btn-primary">Unirse</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- footer content -->
-  <div class="footer bg-footer section border-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
-          <!-- logo -->
-          <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="{{ asset('images/logo.png') }}" alt="logo"></a>
-          <ul class="list-unstyled">
-            <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-            <li class="mb-2">+1 (2) 345 6789</li>
-            <li class="mb-2">+1 (2) 345 6789</li>
-            <li class="mb-2">contact@yourdomain.com</li>
-          </ul>
-        </div>
-        <!-- company -->
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">COMPANY</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="about.html">About Us</a></li>
-            <li class="mb-3"><a class="text-color" href="teacher.html">Our Teacher</a></li>
-            <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
-            <li class="mb-3"><a class="text-color" href="blog.html">Blog</a></li>
-          </ul>
-        </div>
-        <!-- links -->
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">LINKS</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-            <li class="mb-3"><a class="text-color" href="events.html">Events</a></li>
-            <li class="mb-3"><a class="text-color" href="notice.html">Notice</a></li>
-            <li class="mb-3"><a class="text-color" href="scholarship.html">Scholarship</a></li>
-          </ul>
-        </div>
-        <!-- support -->
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">SUPPORT</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="https://themefisher.com/blog">Forums</a></li>
-            <li class="mb-3"><a class="text-color" href="https://docs.themefisher.com/">Documentation</a></li>
-            <li class="mb-3"><a class="text-color" href="#!">Language</a></li>
-            <li class="mb-3"><a class="text-color" href="#!">Release Status</a></li>
-          </ul>
-        </div>
-        <!-- support -->
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-          <h4 class="text-white mb-5">RECOMMEND</h4>
-          <ul class="list-unstyled">
-            <li class="mb-3"><a class="text-color" href="https://themefisher.com/">WordPress</a></li>
-            <li class="mb-3"><a class="text-color" href="https://themefisher.com/">LearnPress</a></li>
-            <li class="mb-3"><a class="text-color" href="https://themefisher.com/">WooCommerce</a></li>
-            <li class="mb-3"><a class="text-color" href="https://themefisher.com/">bbPress</a></li>
-          </ul>
+    <!-- footer content -->
+    <div class="footer bg-footer section border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+            <!-- logo -->
+            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="{{ asset('images/logo1.png') }}" alt="logo"></a>
+            <ul class="list-unstyled">
+                <li class="mb-2">Av. Juárez Nte. 429, Joyas de San Mateo, 56170 Texcoco, Méx.</li>
+                <li class="mb-2">5959313907</li>
+                <li class="mb-2">5621876068</li>
+                <li class="mb-2">contact@yourdomain.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5"></h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="courses.html"></a></li>
+              <li class="mb-3"><a class="text-color" href="events.html"></a></li>
+              <li class="mb-3"><a class="text-color" href="notice.html"></a></li>
+              <li class="mb-3"><a class="text-color" href="scholarship.html"></a></li>
+            </ul>
+          </div>
+          <!-- company -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">COMPAÑIA</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="about.html">Sobre nosotros</a></li>
+              <li class="mb-3"><a class="text-color" href="teacher.html">Nuestro profesor</a></li>
+              <li class="mb-3"><a class="text-color" href="contact.html">Contacto</a></li>
+              <li class="mb-3"><a class="text-color" href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <!-- links -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">ENLACES</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="courses.html">Cursos</a></li>
+              <li class="mb-3"><a class="text-color" href="events.html">Eventos</a></li>
+              <li class="mb-3"><a class="text-color" href="notice.html">Aviso</a></li>
+              <li class="mb-3"><a class="text-color" href="scholarship.html">Beca</a></li>
+            </ul>
+          </div>
+          <!-- support -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">APOYO</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="https://themefisher.com/blog">Foros</a></li>
+              <li class="mb-3"><a class="text-color" href="https://docs.themefisher.com/">Documentación</a></li>
+              <li class="mb-3"><a class="text-color" href="#!">Idioma</a></li>
+              <li class="mb-3"><a class="text-color" href="#!">Estado de lanzamiento</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <!-- copyright -->
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center">
+            <p class="mb-0">Copyright &copy;
+              <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+              </script>
+              , diseñado y desarrollado por <a href="https://themefisher.com/" class="text-muted"></a>
+            </p>
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://facebook.com/themefisher/"><i
+                    class="ti-facebook text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/themefisher"><i
+                    class="ti-twitter-alt text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://github.com/themefisher"><i
+                    class="ti-github text-primary"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block p-2" href="https://instagram.com/themefisher/"><i
+                    class="ti-instagram text-primary"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- copyright -->
-  <div class="copyright py-4 bg-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-7 text-sm-left text-center">
-          <p class="mb-0">Copyright &copy;
-            <script>
-              var CurrentYear = new Date().getFullYear()
-              document.write(CurrentYear)
-            </script>
-            , designed & developed by <a href="https://themefisher.com/" class="text-muted">Themefisher</a>
-          </p>
-        </div>
-        <div class="col-sm-5 text-sm-right text-center">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://facebook.com/themefisher/"><i class="ti-facebook text-primary"></i></a></li>
-            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/themefisher"><i class="ti-twitter-alt text-primary"></i></a></li>
-            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://github.com/themefisher"><i class="ti-github text-primary"></i></a></li>
-            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://instagram.com/themefisher/"><i class="ti-instagram text-primary"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 <!-- /footer -->
 
 <!-- jQuery -->

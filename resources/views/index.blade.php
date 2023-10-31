@@ -14,7 +14,7 @@
   <!-- Basic Page Needs
 	================================================== -->
   <meta charset="utf-8">
-  <title>Educenter - Education HTML Template</title>
+  <title>Cursos Barstow</title>
 
   <!-- Mobile Specific Metas
 	================================================== -->
@@ -97,7 +97,7 @@
     <div class="navigation w-100">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark p-0">
-          <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+          <a class="navbar-brand" href="{{ route('index') }}"><img src="images/logo1.png" alt="logo"></a>
           <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -114,18 +114,18 @@
                   Cursos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="teacher.html">Diseño</a></li>
-                  <li><a class="dropdown-item" href="teacher-single.html">Desarrollo</a></li>
-                  <li><a class="dropdown-item" href="notice.html">Marketing</a></li>
-                  <li><a class="dropdown-item" href="research.html">Gastronomia</a></li>
-                  <li><a class="dropdown-item" href="scholarship.html">Musica</a></li>
-                  <li><a class="dropdown-item" href="course-single.html">Fotografia</a></li>
-                  <li><a class="dropdown-item" href="event-single.html">Negocios</a></li>
-                  <li><a class="dropdown-item" href="blog-single.html">Informatica y Software</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Diseño</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Desarrollo</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Marketing</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Gastronomia</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Musica</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Fotografia</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Negocios</a></li>
+                  <li><a class="dropdown-item" href="{{ route('index') }}">Informatica y Software</a></li>
                 </ul>
               </li>
               <li class="nav-item @@contact">
-                <a class="nav-link" href="contact.html">CONTACTANOS</a>
+                <a class="nav-link" href="#miFooter">CONTACTANOS</a>
               </li>
             </ul>
           </div>
@@ -150,15 +150,11 @@
           <div class="row">
             <div class="col-md-8">
               <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3"
-                data-animation-in="fadeInLeft" data-delay-in=".1">Descubre, Conecta, Triunfa: En tu Universidad, En tu Tiempo.</h1>
+                data-animation-in="fadeInLeft" data-delay-in=".1">Descubre, Conecta, Triunfa: En tu Centro Universitario Barstow.</h1>
               <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3"
-                data-animation-in="fadeInLeft" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod
-                tempor
-                incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5"
-                data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
+                data-animation-in="fadeInLeft" data-delay-in=".4">Tu futuro asegurado</p>
+              <a href="#signupModal" data-toggle="modal" data-target="#signupModal" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5"
+                data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Registrate</a>
             </div>
           </div>
         </div>
@@ -168,7 +164,7 @@
             <div class="col-md-8">
               <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3"
                 data-animation-in="fadeInDown" data-delay-in=".1">Cursos en Línea, Clases en Vivo: Tu Éxito, Nuestra Prioridad.</h1>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5"
+              <a href="#signupModal" data-toggle="modal" data-target="#signupModal" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5"
                 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Registrate</a>
             </div>
           </div>
@@ -181,8 +177,6 @@
                 data-animation-in="fadeInUp" data-delay-in=".1">Un Mundo de Oportunidades: En Línea y en Persona.</h1>
               <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3"
                 data-animation-in="fadeInUp" data-delay-in=".4">Elige tu camino de Aprendizaje: Clases en Línea o en Persona. ¡Tú Tienes el Poder de Crecer!</p>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5"
-                data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
             </div>
           </div>
         </div>
@@ -200,7 +194,7 @@
             <h2 class="mb-0 text-nowrap mr-3">Cursos más populares</h2>
             <div class="border-top w-100 border-primary d-none d-sm-block"></div>
             <div>
-              <a href="courses.html" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">Mostrar todos</a>
+              <a href="{{ route('index') }}" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">Mostrar todos</a>
             </div>
           </div>
         </div>
@@ -477,18 +471,18 @@
   <!-- /teachers -->
 
   <!-- footer -->
-  <footer>
+  <footer id="miFooter">
     <!-- newsletter -->
     <div class="newsletter">
       <div class="container">
         <div class="row">
           <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
-            <h3 class="text-white">Subscribe Now</h3>
+            <h3 class="text-white">Incribete ahora</h3>
             <form action="#">
               <div class="input-wrapper">
                 <input type="email" class="form-control border-0" id="newsletter" name="newsletter"
-                  placeholder="Enter Your Email...">
-                <button type="submit" value="send" class="btn btn-primary">Join</button>
+                  placeholder="Ingresa tu Correo">
+                <button type="submit" value="send" class="btn btn-primary">Unirse</button>
               </div>
             </form>
           </div>
@@ -501,55 +495,53 @@
         <div class="row">
           <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
             <!-- logo -->
-            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+            <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo1.png" alt="logo"></a>
             <ul class="list-unstyled">
-              <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-              <li class="mb-2">+1 (2) 345 6789</li>
-              <li class="mb-2">+1 (2) 345 6789</li>
-              <li class="mb-2">contact@yourdomain.com</li>
+                <li class="mb-2">Av. Juárez Nte. 429, Joyas de San Mateo, 56170 Texcoco, Méx.</li>
+                <li class="mb-2">5959313907</li>
+                <li class="mb-2">5621876068</li>
+                <li class="mb-2">contact@yourdomain.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5"></h4>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a class="text-color" href="courses.html"></a></li>
+              <li class="mb-3"><a class="text-color" href="events.html"></a></li>
+              <li class="mb-3"><a class="text-color" href="notice.html"></a></li>
+              <li class="mb-3"><a class="text-color" href="scholarship.html"></a></li>
             </ul>
           </div>
           <!-- company -->
           <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-            <h4 class="text-white mb-5">COMPANY</h4>
+            <h4 class="text-white mb-5">COMPAÑIA</h4>
             <ul class="list-unstyled">
-              <li class="mb-3"><a class="text-color" href="about.html">About Us</a></li>
-              <li class="mb-3"><a class="text-color" href="teacher.html">Our Teacher</a></li>
-              <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
+              <li class="mb-3"><a class="text-color" href="about.html">Sobre nosotros</a></li>
+              <li class="mb-3"><a class="text-color" href="teacher.html">Nuestro profesor</a></li>
+              <li class="mb-3"><a class="text-color" href="contact.html">Contacto</a></li>
               <li class="mb-3"><a class="text-color" href="blog.html">Blog</a></li>
             </ul>
           </div>
           <!-- links -->
           <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-            <h4 class="text-white mb-5">LINKS</h4>
+            <h4 class="text-white mb-5">ENLACES</h4>
             <ul class="list-unstyled">
-              <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-              <li class="mb-3"><a class="text-color" href="events.html">Events</a></li>
-              <li class="mb-3"><a class="text-color" href="notice.html">Notice</a></li>
-              <li class="mb-3"><a class="text-color" href="scholarship.html">Scholarship</a></li>
+              <li class="mb-3"><a class="text-color" href="courses.html">Cursos</a></li>
+              <li class="mb-3"><a class="text-color" href="events.html">Eventos</a></li>
+              <li class="mb-3"><a class="text-color" href="notice.html">Aviso</a></li>
+              <li class="mb-3"><a class="text-color" href="scholarship.html">Beca</a></li>
             </ul>
           </div>
           <!-- support -->
           <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-            <h4 class="text-white mb-5">SUPPORT</h4>
+            <h4 class="text-white mb-5">APOYO</h4>
             <ul class="list-unstyled">
-              <li class="mb-3"><a class="text-color" href="https://themefisher.com/blog">Forums</a></li>
-              <li class="mb-3"><a class="text-color" href="https://docs.themefisher.com/">Documentation</a></li>
-              <li class="mb-3"><a class="text-color" href="#!">Language</a></li>
-              <li class="mb-3"><a class="text-color" href="#!">Release Status</a></li>
+              <li class="mb-3"><a class="text-color" href="https://themefisher.com/blog">Foros</a></li>
+              <li class="mb-3"><a class="text-color" href="https://docs.themefisher.com/">Documentación</a></li>
+              <li class="mb-3"><a class="text-color" href="#!">Idioma</a></li>
+              <li class="mb-3"><a class="text-color" href="#!">Estado de lanzamiento</a></li>
             </ul>
           </div>
-          <!-- support -->
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-            <h4 class="text-white mb-5">RECOMMEND</h4>
-            <ul class="list-unstyled">
-              <li class="mb-3"><a class="text-color" href="https://themefisher.com/">WordPress</a></li>
-              <li class="mb-3"><a class="text-color" href="https://themefisher.com/">LearnPress</a></li>
-              <li class="mb-3"><a class="text-color" href="https://themefisher.com/">WooCommerce</a></li>
-              <li class="mb-3"><a class="text-color" href="https://themefisher.com/">bbPress</a></li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
     <!-- copyright -->
@@ -562,7 +554,7 @@
                 var CurrentYear = new Date().getFullYear()
                 document.write(CurrentYear)
               </script>
-              , designed & developed by <a href="https://themefisher.com/" class="text-muted">Themefisher</a>
+              , diseñado y desarrollado por <a href="https://themefisher.com/" class="text-muted"></a>
             </p>
           </div>
           <div class="col-sm-5 text-sm-right text-center">

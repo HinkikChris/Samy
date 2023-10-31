@@ -21,7 +21,10 @@ Route::view('/cursos/soft/cursohtml', 'courses.courses3')->name('cursohtml');
 Route::view('/cursos/soft/cursocss', 'courses.courses4')->name('cursocss');
 Route::view('/cursos/mate/aritmetica', 'courses.courses5')->name('mate');
 Route::view('/cursos/soft/jsdesdecero', 'courses.courses6')->name('cursojs');
-Route::view('/cursos/pago/', 'layouts.pay')->name('cursojs');
+Route::view('/cursos/pago/', 'layouts.pay')->name('pay');
+Route::view('/dashboard', 'dashboard2')->name('dash');
+Route::view('/Form', 'dashForm')->name('Form');
+Route::view('/Tabla', 'dashTabla')->name('Tabla');
 
 Route::view('index', 'index')
     ->middleware(['auth', 'verified'])
