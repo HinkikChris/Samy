@@ -23,7 +23,7 @@ Route::view('/cursos/mate/aritmetica', 'courses.courses5')->name('mate');
 Route::view('/cursos/soft/jsdesdecero', 'courses.courses6')->name('cursojs');
 Route::view('/cursos/pago/', 'layouts.pay')->name('cursojs');
 
-Route::view('/index', 'index')
+Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
