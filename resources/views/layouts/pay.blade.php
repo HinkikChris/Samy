@@ -10,12 +10,11 @@
 </head>
 <body>
 <div class="contenedor">
-
-    <!-- Tarjeta -->
     <section class="tarjeta" id="tarjeta">
-        <div class="delantera" style="background: url({{asset("images/img/bg-tarjeta/bg-tarjeta-02.jpg")}}");>
+    <div class="delantera">
             <div class="logo-marca" id="logo-marca">
-                <!-- <img src="img/logos/visa.png" alt=""> -->
+                 <img src="{{ asset('images/img/logos/mastercard.png') }}" alt="Visa Logo">
+                 <img src="{{ asset('images/img/logos/visa.png') }}" alt="Visa Logo">
             </div>
             <img src="{{ asset('images/img/chip-tarjeta.png') }}" class="chip" alt=""></a>
             <div class="datos">
@@ -37,7 +36,7 @@
             </div>
         </div>
 
-        <div class="trasera" style="background: url({{asset("images/img/bg-tarjeta/bg-tarjeta-02.jpg")}})">
+        <div class="trasera">
             <div class="barra-magnetica"></div>
             <div class="datos">
                 <div class="grupo" id="firma">
@@ -53,23 +52,21 @@
             <a href="#" class="link-banco">www.tubanco.com</a>
         </div>
     </section>
-
-    <!-- Contenedor Boton Abrir Formulario -->
     <div class="contenedor-btn">
-        <button class="btn-abrir-formulario" id="btn-abrir-formulario">
-            <i class="fas fa-plus"></i>
-        </button>
+        <a class="btn-abrir-formulario" id="btn-abrir-formulario">
+
+        </a>
     </div>
 
     <!-- Formulario -->
-    <form onsubmit="return confirmarEnvio() action="" id="formulario-tarjeta" class="formulario-tarjeta" onsubmit="return confirmarEnvio()">
+    <form onsubmit="return confirmarEnvio()" action="" id="formulario-tarjeta" class="formulario-tarjeta">
         <div class="grupo">
             <label for="inputNumero">Número Tarjeta</label>
-            <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+            <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required>
         </div>
         <div class="grupo">
             <label for="inputNombre">Nombre</label>
-            <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+            <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required>
         </div>
         <div class="flexbox">
             <div class="grupo expira">
@@ -92,22 +89,41 @@
 
             <div class="grupo ccv">
                 <label for="inputCCV">CCV</label>
-                <input type="text" id="inputCCV" maxlength="3">
+                <input type="text" id="inputCCV" maxlength="3" required>
             </div>
         </div>
-        <button onclick="confirmarEnvio()" type="submit" class="btn-enviar">Enviar</button>
+        <button type="button" class="btn-cancelar" onclick="confirmarCancelar()">Cancelar</button>
+        <button type="button" class="btn-enviar" onclick="confirmarEnviar()">Enviar</button>
     </form>
 </div>
-
+<section class="seccion-precio">
+        <div class="precio-detalle">
+            <h2>Resumen</h2>
+            <div class="detalle">
+                <span class="label">Precio Original:</span>
+                <span class="valor">500</span>
+            </div>
+            <div class="detalle">
+                <span class="label">Descuento:</span>
+                <span class="valor">-400</span>
+            </div>
+            <hr>
+            <div class="detalle total">
+                <span class="label">Total:</span>
+                <span class="valor">100</span>
+            </div>
+            <p class="terminos">Al completar su compra, acepta estos Términos de servicio.</p>
+        </div>
+    </section>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
-    function confirmarEnvio() {
+    function confirmarCancelar() {
         swal({
             title: "¿Estás seguro?",
-            text: "No se podra cancel el pago.",
-            icon: "success",
+            text: "No se realizara el pago.",
+            icon: "warning",
             buttons: {
                 cancel: "Cancelar",
                 confirm: "Sí, estoy seguro",
@@ -119,6 +135,29 @@
             }
         });
     }
-</script>i
+
+    function confirmarEnviar() {
+        swal({
+            title: "¿Estás seguro?",
+            text: "No se podrá cancelar el pago.",
+            icon: "info",
+            buttons: {
+                cancel: "Cancelar",
+                confirm: "Sí, estoy seguro",
+            },
+            dangerMode: true,
+        }).then((confirmado) => {
+            if (confirmado) {
+                swal({
+                    title: "¡Compra Exitosa!",
+                    text: "Tu curso ha sido comprado exitosamente.",
+                    icon: "success",
+                }).then(() => {
+                    window.location.href = "{{ route('index') }}";
+                });
+            }
+        });
+    }
+</script>
 </body>
 </html>

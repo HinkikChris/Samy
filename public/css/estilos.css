@@ -7,11 +7,13 @@
 body {
 	background: #ddeefc;
 	font-family: 'Lato', sans-serif;
+	display: flex;
+	justify-content: space-between;
 }
 
 .contenedor {
-	width: 90%;
-	max-width: 1000px;
+	width: 45%;
+	max-width: 500px;
 	padding: 40px 20px;
 	margin: auto;
 	display: flex;
@@ -50,6 +52,7 @@ body {
 
 .tarjeta .delantera {
 	width: 100%;
+	background: url("../images/img/bg-tarjeta/bg-tarjeta-03.jpg");
 	background-size: cover;
 }
 
@@ -93,6 +96,7 @@ body {
 
 /* ---------- Tarjeta Trasera ----------*/
 .trasera {
+	background: url("../images/img/bg-tarjeta/bg-tarjeta-03.jpg");
 	background-size: cover;
 	position: absolute;
 	top: 0;
@@ -165,9 +169,6 @@ body {
 	height: 50px;
 	font-size: 20px;
 	line-height: 20px;
-	background: #2364d2;
-	color: #fff;
-	position: relative;
 	top: -25px;
 	z-index: 3;
 	border-radius: 100%;
@@ -176,10 +177,6 @@ body {
 	transition: all .2s ease;
 	border: none;
 	cursor: pointer;
-}
-
-.contenedor-btn .btn-abrir-formulario:hover {
-	background: #1850b1;
 }
 
 .contenedor-btn .btn-abrir-formulario.active {
@@ -196,8 +193,8 @@ body {
 	position: relative;
 	top: -150px;
 	z-index: 1;
-	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-	transition: clip-path .3s ease-out;
+	/*clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);*/
+	/*transition: clip-path .3s ease-out;*/
 }
 
 .formulario-tarjeta.active {
@@ -222,7 +219,15 @@ body {
 	transition: .3s ease all;
 	border-radius: 5px;
 }
-
+.btn-cancelar {
+	border: 2px solid #CED6E0;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
 .formulario-tarjeta input:hover,
 .formulario-tarjeta select:hover {
 	border: 2px solid #93BDED;
@@ -241,7 +246,8 @@ body {
 
 .formulario-tarjeta .flexbox {
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .formulario-tarjeta .expira {
@@ -249,7 +255,8 @@ body {
 }
 
 .formulario-tarjeta .ccv {
-	min-width: 100px;
+    min-width: 100px;
+    margin-top: 15px;
 }
 
 .formulario-tarjeta .grupo-select {
@@ -282,8 +289,79 @@ body {
 	background: #2364d2;
 	box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
 	cursor: pointer;
+	width: 48%;
 }
 
 .formulario-tarjeta .btn-enviar:hover {
 	background: #1850b1;
+}
+
+.formulario-tarjeta .btn-cancelar {
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	color: #fff;
+	background: #ff9185;
+	box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
+	cursor: pointer;
+	width: 50%;
+}
+
+.formulario-tarjeta .btn-cancelar:hover {
+	background: #7e251b;
+}
+
+.seccion-precio {
+    width: 50%;
+    background-color: #f9f9f9;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+	height: 80vh;
+}
+
+.precio-detalle {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.detalle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.detalle span {
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+}
+
+.detalle .valor {
+    font-weight: bold;
+    text-align: right;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.total {
+    margin-top: 10px;
+}
+
+.terminos {
+    color: #777;
+    font-size: 14px;
 }
