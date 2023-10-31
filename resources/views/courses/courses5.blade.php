@@ -248,7 +248,7 @@
                   </ul>
               </div>
               <div class="col-xl-3 text-sm-right text-left order-sm-2 order-3 order-xl-3 col-sm-6 mb-4 mb-xl-0">
-                  <a href="course-single.html" class="btn btn-primary">Suscribirse</a>
+                  <a href="{{ route('cursojs') }}" class="btn btn-primary">Suscribirse</a>
               </div>
               <!-- border -->
               <div class="col-12 mt-4 order-4">
